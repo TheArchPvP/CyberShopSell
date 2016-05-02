@@ -1,0 +1,27 @@
+#name, main, version and api are required
+name: CyberShopSell
+main: CyberTech.CyberShopSell.Main
+#remember version and api is string, don't write it like this: 1.0.0, or there will be an exception
+version: "1.0.0"
+api: ["1.0.0"]
+
+author: Yungtechboy1
+description: Econ Plugin for ArchMCPE
+commands:
+  shop:
+      description: Send a TP requst to player
+      usage: "/shop Asdasd"
+      permission: CyberTech.CyberShopSell.AddShop
+  sell:
+      description: Accept TP Requests
+      usage: "/sell sadasdasd"
+      permission: CyberTech.CyberShopSell.AddSell
+permissions:
+  CyberTech.CyberShopSell:
+    description: "Allows the user to run the example command"
+    default: op
+    children:
+      CyberTech.CyberShopSell.AddShop:
+        description: "Allows the user to run the example command"
+      CyberTech.CyberShopSell.AddSell:
+        description: "Allows the user to run the example command"
